@@ -1,8 +1,8 @@
 ## Elasticsearch
 
-Define a relationship for Elasticsearc using the _default endpoints_ configuration format:
+Define a relationship for Elasticsearc using the _explicit endpoints_ configuration format:
 
 ```yaml
 relationships:
-    elasticsearch:
+    essearch: "searchelastic:elasticsearch"
 ```
