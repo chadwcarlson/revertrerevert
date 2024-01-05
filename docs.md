@@ -1,24 +1,21 @@
 ## Relationships
 
-Relationships require you to specify _explicit endpoints_:
+Relationships don't require you to specify _explicit endpoints_, because Upsun provides common endpoints by default.
 
-- a name for the relationship (`REL_NAME`)
-- the name of the service (`SERVICE_NAME`)
-- the service endpoint (`SERVICE_ENDPOINT`)
-
-Which make up the following configuration:
+Provide a name for the service (`SERVICE_NAME`) under `services`,
+then reuse that name under `relationships`:
 
 ```yaml
 relationships:
-    REL_NAME: 'SERVICE_NAME:SERVICE_ENDPOINT'
+    SERVICE_NAME:
 ```
 
-Below is an example of using this _explicit endpoints_ relationships configuration for four services:
+Below is an example of using this _default endpoints_ relationships configuration for four services:
 
 ```yaml
 relationships:
-    database: 'mysqldb:db1'
-    database2: 'mysqldb:db2'
-    cache: 'rediscache:redis'
-    search: 'searchserver:elasticsearch'
+    database:
+    database2:
+    cache:
+    search:
 ```
